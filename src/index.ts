@@ -30,6 +30,8 @@ server.patch('/bookings', loader.updateBooking);
 server.delete('/bookings/:clientId/:id', loader.updateBooking);
 server.get('/uploaddatabase', loader.uploadDb);
 
+loader.uploadDb();
+
 const port = 3003;
 server.listen(port, () =>
     console.log(`
@@ -37,19 +39,19 @@ server.listen(port, () =>
 ⭐️ Start doing some stuff`),
 )
 
-// const selfInvoke = () => {
-//     const domain = 'https://restaurants-server-3.onrender.com/'
-//     const paths = ['client/', 'cafe/'];
-//     const ind = Math.floor(Math.random() * 2)
-//     const id = Math.floor(Math.random() * 100) + 1;
-//     const url = domain + paths[ind] + id;
-//     fetch(url, {
-//         method: 'GET'
-//     })
-//         .then(async (res: Response) => console.log(res.status, url, 'invoked:', Date()))
-//         .catch((err: Error) => console.log(err.message))
+const selfInvoke = () => {
+    const domain = 'https://restaurants-server-3.onrender.com/'
+    const paths = ['client/', 'cafe/'];
+    const ind = Math.floor(Math.random() * 2)
+    const id = Math.floor(Math.random() * 100) + 1;
+    const url = domain + paths[ind] + id;
+    fetch(url, {
+        method: 'GET'
+    })
+        .then(async (res: Response) => console.log(res.status, url, 'invoked:', Date()))
+        .catch((err: Error) => console.log(err.message))
 
-//     setTimeout(selfInvoke, (Math.floor(Math.random() * 30) + 120) * 1000);
-// }
+    setTimeout(selfInvoke, (Math.floor(Math.random() * 30) + 120) * 1000);
+}
 
-// selfInvoke();
+selfInvoke();

@@ -36,5 +36,3 @@ const addFav = async () => {
     console.log(await response.json())
 }
 
-addFav();
-//func();
