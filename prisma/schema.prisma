@@ -2,13 +2,9 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// datasource db {
-//   provider = "postgresql"
-//   url      = "postgresql://admin:ZeSfKCQgKFq3Ni02WQs9EcJshJWtG9iK@dpg-cfck8l6n6mpierpp4790-a.frankfurt-postgres.render.com:5432/raviole"
-// }
 datasource db {
   provider = "postgresql"
-  url      = "postgres://admin300423:3InyceePJxVWk9zKiu7Z7oghz1hXbnjt@dpg-ch7427jhp8u9bo50rn3g-a.frankfurt-postgres.render.com/raviole300423"
+  url      = "postgres://admin300423:3InyceePJxVWk9zKiu7Z7oghz1hXbnjt@dpg-ch7427jhp8u9bo50rn3g-a.frankfurt-postgres.render.com/raviole"
 }
 
 model Client {
