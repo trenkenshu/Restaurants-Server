@@ -30,7 +30,7 @@ server.patch('/bookings', loader.updateBooking);
 server.delete('/bookings/:clientId/:id', loader.updateBooking);
 server.get('/uploaddatabase', loader.uploadDb);
 
-loader.uploadDb();
+// loader.uploadDb();
 
 const port = 3003;
 server.listen(port, () =>
