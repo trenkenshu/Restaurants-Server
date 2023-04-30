@@ -5,7 +5,7 @@ import db from '../db_helpers/restaurants_db';
 const prisma = new PrismaClient();
 
 const headers = (req: Request, res: Response, next: NextFunction) => {
-    const origin = req.headers.origin ? req.headers.origin : ''
+    const origin = req.headers.origin ? req.headers.origin : 'rs-clone-raviole-booking.netlify.app'
     res.setHeader('Access-Control-Allow-Origin', origin)
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
