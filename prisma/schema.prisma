@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://admin300423:3InyceePJxVWk9zKiu7Z7oghz1hXbnjt@dpg-ch7427jhp8u9bo50rn3g-a.frankfurt-postgres.render.com/raviole"
+  url      = "postgres://admin300423:3InyceePJxVWk9zKiu7Z7oghz1hXbnjt@dpg-ch7427jhp8u9bo50rn3g-a.frankfurt-postgres.render.com/raviole?connection_limit=5"
 }
 
 model Client {
